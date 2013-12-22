@@ -1,1 +1,14 @@
-<h1>drill</h1>
+<h1>DRILL</h1>
+<hr />
+<span id="ipaddr">IPAddr: <%= @ip.ipv4 %></span><br />
+<%= form_tag "/drill/result", :remote => true do %>
+  <%= label_tag "network: " %>
+  <%= text_field_tag "network" %>
+  <br/>
+  <%= label_tag "broadcast: " %>
+  <%= text_field_tag "broadcast" %>
+  <br/>
+  <%= submit_tag "post" %>
+<% end %>
+<hr />
+<div id="result"></div>

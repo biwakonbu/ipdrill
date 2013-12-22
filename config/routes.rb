@@ -1,5 +1,6 @@
 Ipdrill::Application.routes.draw do
   get 'drill/index'
+  post 'drill/result'
   root 'drill#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

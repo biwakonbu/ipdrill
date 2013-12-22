@@ -1,0 +1,6 @@
+$('#ipaddr').html(
+    "IPAddr: <%= @ip.ipv4 %>"
+)
+$('#result').html(
+    "Network address: <%= @answer[:network][:mes] %><% if (@answer[:network][:answer]) %><br/><%= @answer[:network][:answer] %><% end %><br />Broadcast address: <%= @answer[:broadcast][:mes] %><% if (@answer[:broadcast][:answer]) %><br /><%= @answer[:broadcast][:answer] %><% end %>"
+);
