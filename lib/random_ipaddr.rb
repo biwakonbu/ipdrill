@@ -46,6 +46,22 @@ class RandomIPAddr
     @ip_v4.join('.') + "/" + @subnet_v4.to_s
   end
 
+  def ipv4_rand
+    if rand(2) == 0
+      i = 0
+      subnet_mask = ""
+      31.downto(0) do |i|
+        subnet_mask << "1"
+        if i % 8 == 0
+          subnet_mask << " "
+        end
+      end
+    else
+      subnet_mask = @subnet_v4.to_s
+    end
+    @ip_v4.join('.') + "/" + subnet_mask
+  end
+
   def new_ip
     ip = []
     for i in (1..4)
