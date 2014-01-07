@@ -1,6 +1,6 @@
 <h1>DRILL</h1>
 <hr />
-<span id="ipaddr">IPAddr: <%= @ip.ipv4_rand %></span><br />
+<span id="ipaddr">IPAddr: <%= @ip.ipv4 %></span><br />
 <%= form_tag "/drill/result", :remote => true do %>
   <%= label_tag "network: " %>
   <%= text_field_tag "network" %>
